@@ -14,7 +14,8 @@ namespace TMG.Survivors
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent<InitCharacterFlag>(entity);
                 AddComponent<CharacterMoveDirection>(entity);
-                AddComponent(entity, new CharacterMoveSpeed { Value = authoring._moveSpeed });
+                AddComponent<CharacterMoveSpeed>(entity, new CharacterMoveSpeed { Value = authoring._moveSpeed });
+                AddComponent<FacingDirectionOverride>(entity, new FacingDirectionOverride { Value = 1 });
             }
         }
     }
