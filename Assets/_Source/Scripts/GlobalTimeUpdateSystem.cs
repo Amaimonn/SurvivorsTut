@@ -1,3 +1,4 @@
+using Unity.Burst;
 using Unity.Entities;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace TMG.Survivors
     {
         private static readonly int _globalTimeShaderPropertyId = Shader.PropertyToID("_GlobalTime");
 
+        [BurstCompile]
         public readonly void OnUpdate(ref SystemState state)
         {
             Shader.SetGlobalFloat(_globalTimeShaderPropertyId, (float)SystemAPI.Time.ElapsedTime);
