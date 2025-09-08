@@ -13,6 +13,7 @@ namespace TMG.Survivors
                 AddComponent<PlayerTag>(entity);
                 AddComponent<InitCameraTargetTag>(entity);
                 AddComponent<CameraTarget>(entity);
+                AddComponent<AnimationIndexOverride>(entity);
             }
         }
     }

@@ -10,7 +10,7 @@ namespace TMG.Survivors
     {
         public Vector2 MoveInput;
 
-        public readonly void Execute(ref CharacterMoveDirection direction)
+        public void Execute(ref CharacterMoveDirection direction)
         {
             direction.Value = MoveInput;
         }

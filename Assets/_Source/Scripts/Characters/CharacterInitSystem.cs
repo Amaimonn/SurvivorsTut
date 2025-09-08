@@ -9,7 +9,7 @@ namespace TMG.Survivors
     public partial struct CharacterInitSystem : ISystem
     {
         [BurstCompile]
-        public readonly void OnUpdate(ref SystemState state)
+        public void OnUpdate(ref SystemState state)
         {
             foreach (var (mass, shouldInit) in SystemAPI.Query<RefRW<PhysicsMass>, EnabledRefRW<InitCharacterFlag>>())
             {
