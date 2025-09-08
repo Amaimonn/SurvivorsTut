@@ -36,8 +36,8 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
-  - SHADOWCASTER
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -108,7 +108,7 @@ Material:
     - _AlphaClip: 1
     - _AlphaToMask: 0
     - _AnimationCount: 2
-    - _AnimationIndex: 0
+    - _AnimationIndex: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BlendOp: 0
