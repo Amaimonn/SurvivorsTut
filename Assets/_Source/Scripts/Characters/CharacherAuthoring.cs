@@ -19,6 +19,7 @@ namespace TMG.Survivors
                 AddComponent(entity, new FacingDirectionOverride { Value = 1 });
                 AddComponent(entity, new CharacterMaxHitPoints { Value = authoring._hitPoints });
                 AddComponent(entity, new CharacterCurrentHitPoints { Value = authoring._hitPoints });
+                AddBuffer<DamageThisFrame>(entity);
             }
         }
     }
