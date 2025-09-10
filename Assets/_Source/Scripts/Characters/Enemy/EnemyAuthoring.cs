@@ -7,7 +7,7 @@ namespace TMG.Survivors
     public class EnemyAuthoring : MonoBehaviour
     {
         [SerializeField] private int _attackDamage;
-        [SerializeField] private int _attackCooldown;
+        [SerializeField] private float _attackCooldown;
 
         private class Baker : Baker<EnemyAuthoring>
         {
