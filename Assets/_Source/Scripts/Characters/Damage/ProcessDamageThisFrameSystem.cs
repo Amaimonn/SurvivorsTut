@@ -1,6 +1,5 @@
 using Unity.Burst;
 using Unity.Entities;
-using UnityEngine;
 
 namespace TMG.Survivors
 {
@@ -9,8 +8,8 @@ namespace TMG.Survivors
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            foreach (var (characterHitPoints, damageBuffer) in SystemAPI.Query<RefRW<CharacterCurrentHitPoints>,
-                DynamicBuffer<DamageThisFrame>>())
+            foreach (var (characterHitPoints, damageBuffer, entity) in SystemAPI.Query<RefRW<CharacterCurrentHitPoints>,
+                DynamicBuffer<DamageThisFrame>>().WithPresent<DestroyEntityFlag>().WithEntityAccess())
             {
                 if (damageBuffer.IsEmpty)
                     continue;
@@ -19,6 +18,9 @@ namespace TMG.Survivors
                     characterHitPoints.ValueRW.Value -= damage.Value;
 
                 damageBuffer.Clear();
+
+                if (characterHitPoints.ValueRO.Value <= 0)
+                    SystemAPI.SetComponentEnabled<DestroyEntityFlag>(entity, true);
             }
         }
     }

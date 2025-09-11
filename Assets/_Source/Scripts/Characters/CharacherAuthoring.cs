@@ -20,6 +20,8 @@ namespace TMG.Survivors
                 AddComponent(entity, new CharacterMaxHitPoints { Value = authoring._hitPoints });
                 AddComponent(entity, new CharacterCurrentHitPoints { Value = authoring._hitPoints });
                 AddBuffer<DamageThisFrame>(entity);
+                AddComponent<DestroyEntityFlag>(entity);
+                SetComponentEnabled<DestroyEntityFlag>(entity, false);
             }
         }
     }
