@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 993086729947670596}
   - component: {fileID: 8873580941587458324}
   - component: {fileID: 7548888679437873750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlasmaBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

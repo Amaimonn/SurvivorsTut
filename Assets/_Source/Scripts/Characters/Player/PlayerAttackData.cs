@@ -1,4 +1,6 @@
 using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Physics;
 
 namespace TMG.Survivors
 {
@@ -6,5 +8,7 @@ namespace TMG.Survivors
     {
         public Entity AttackPrefab;
         public float Cooldown;
+        public float3 DetectionSize;
+        public CollisionFilter AttackFilter;
     }
 }

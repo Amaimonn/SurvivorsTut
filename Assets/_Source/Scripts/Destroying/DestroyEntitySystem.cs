@@ -1,4 +1,3 @@
-using Unity.Burst;
 using Unity.Entities;
 
 namespace TMG.Survivors
@@ -7,7 +6,6 @@ namespace TMG.Survivors
     [UpdateBefore(typeof(EndSimulationEntityCommandBufferSystem))]
     public partial struct DestroyEntitySystem : ISystem
     {
-        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var endEcbSystem = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();

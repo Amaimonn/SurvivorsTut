@@ -574,6 +574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d124a5b5e41634195bd91919639d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attackPrefab: {fileID: 5190601792996363742, guid: 9b68c4b2dfca7344fa19d1eaf3e16334, type: 3}
+  _attackCooldown: 1
+  _detectionSize: 10
 --- !u!114 &861199954
 MonoBehaviour:
   m_ObjectHideFlags: 0
