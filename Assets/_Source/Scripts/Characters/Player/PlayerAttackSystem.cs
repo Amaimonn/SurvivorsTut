@@ -1,3 +1,4 @@
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -6,6 +7,7 @@ using Unity.Transforms;
 
 namespace TMG.Survivors
 {
+    [BurstCompile]
     public partial struct PlayerAttackSystem : ISystem
     {
         public void OnCreate(ref SystemState state)

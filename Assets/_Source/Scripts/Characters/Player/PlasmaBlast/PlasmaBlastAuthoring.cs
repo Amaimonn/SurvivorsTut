@@ -14,6 +14,8 @@ namespace TMG.Survivors
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new PlasmaBlastData() { MoveSpeed = authoring._moveSpeed, Damage = authoring._damage });
+                AddComponent<DestroyEntityFlag>(entity);
+                SetComponentEnabled<DestroyEntityFlag>(entity, false);
             }
         }
     }
