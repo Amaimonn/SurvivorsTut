@@ -1,3 +1,4 @@
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
 
@@ -5,6 +6,7 @@ namespace TMG.Survivors
 {
     public partial struct MovePlasmaBlastSystem : ISystem
     {
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var deltaTime = SystemAPI.Time.DeltaTime;

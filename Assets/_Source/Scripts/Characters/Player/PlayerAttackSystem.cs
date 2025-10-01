@@ -67,7 +67,6 @@ namespace TMG.Survivors
                 var attackOrientation = quaternion.Euler(0, 0, angleToEnemy);
 
                 var attackEntity = ecbBeginSimulation.Instantiate(attackData.ValueRO.AttackPrefab);
-
                 ecbBeginSimulation.SetComponent(attackEntity, LocalTransform.FromPositionRotation(spawnPosition, attackOrientation));
 
                 expirationTimestamp.ValueRW.Value = elapsedTime + attackData.ValueRO.Cooldown;
